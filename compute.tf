@@ -33,7 +33,7 @@ resource "oci_core_instance" "DevCS_MYSQL" {
 
   provisioner "remote-exec" {
     inline = [
-      "touch ~/IMadeAFile.Right.Here.Docker"
+      "touch ~/IMadeAFile.Right.Here"
     ]
   }
 }
