@@ -1,0 +1,24 @@
+### Substitute USERNAME to correct the path
+### Substitute the OCIDs, fingerprints and keys with the correct ones for your environment
+### File for Linux and OS X Users in shell environment
+### Authentication details
+export TF_VAR_tenancy_ocid=ocid1.tenancy.oc1..aaaaaaaaivqvhsl7eb5xm562owq2xsx4whv6bxocgwhpm7xk5sqju7wdnxaa
+export TF_VAR_user_ocid=ocid1.user.oc1..aaaaaaaazusfrxnxk3qx3fxxx75ynagfsmtdoorkfffb2hqu6rxnxcfjpcwa
+export TF_VAR_fingerprint=a3:05:00:31:a4:4c:d4:28:a3:55:7f:6d:89:97:2e:5e
+#export TF_VAR_private_key_path=./oci_api_key.pem
+export TF_VAR_client_image=ocid1.image.oc1.iad.aaaaaaaa6bn654zevws6e2hnx6mn6aauqj6uv3pu3wp5mzrett5vnn3z7y4a
+
+### Compartment
+export TF_VAR_compartment_ocid=ocid1.compartment.oc1..aaaaaaaaalblsb7j3wcrz7vgdwocmqbsybi6hrwaiyc6oalf5jmp4cmsrcha
+
+### Public/private keys used on the instances
+#export TF_VAR_ssh_public_key=$(cat ./oci_instance_key.pub)
+#export TF_VAR_ssh_private_key=$(cat ./oci_instance_key)
+
+### Region
+#export TF_VAR_region=us-ashburn-1
+
+#export TF_VAR_deployment_auuid=deploy1
+#export TF_VAR_deployment_short_id=123
+#export TF_VAR_user_email=Matthew.Orsie@oracle.com
+#export TF_VAR_user_name=MattOrsie
