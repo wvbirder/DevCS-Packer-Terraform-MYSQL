@@ -1,0 +1,45 @@
+{
+  "_comment": "The default base_image_ocid parameter below is for Ashburn, VA (IAD). If your trial is from another datacenter substitute the appropriate OCID",
+  "_comment": "FRANKFURT=ocid1.image.oc1.eu-frankfurt-1.aaaaaaaakzrywmh7kwt7ugj5xqi5r4a7xoxsrxtc7nlsdyhmhqyp7ntobjwq",
+  "_comment": "ASHBURN=ocid1.image.oc1.iad.aaaaaaaa2tq67tvbeavcmioghquci6p3pvqwbneq3vfy7fe7m7geiga4cnxa",
+  "_comment": "LONDON=ocid1.image.oc1.uk-london-1.aaaaaaaalsdgd47nl5tgb55sihdpqmqu2sbvvccjs6tmbkr4nx2pq5gkn63a",
+  "_comment": "PHOENIX=ocid1.image.oc1.phx.aaaaaaaasez4lk2lucxcm52nslj5nhkvbvjtfies4yopwoy4b3vysg5iwjra",  
+  "builders": [
+    {
+      "user_ocid":"USER-HERE",
+      "tenancy_ocid": "TENANCY-HERE",
+      "fingerprint":"a3:05:00:31:a4:4c:d4:28:a3:55:7f:6d:89:97:2e:5e",
+      "key_file":"oci_api_key.pem",
+      "availability_domain": "AD-HERE",
+      "region": "us-ashburn-1",
+      "base_image_ocid": "ocid1.image.oc1.iad.aaaaaaaa2tq67tvbeavcmioghquci6p3pvqwbneq3vfy7fe7m7geiga4cnxa",
+      "compartment_ocid": "COMPARTMENT-HERE",
+      "image_name": "DevCS_MYSQL",
+      "shape": "VM.Standard1.1",
+      "ssh_username": "opc",
+      "ssh_password": "welcome1",
+      "subnet_ocid": "AD1-SUBNET-HERE",
+      "type": "oracle-oci"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "sleep 30",
+        "sudo yum install git -y",
+        "sudo setenforce Permissive",
+        "sudo sed -i.bak s/SELINUX=enforcing/SELINUX=permissive/g /etc/selinux/config",
+        "wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm",
+        "sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm",
+        "sudo yum install mysql-server -y",
+        "sudo systemctl enable mysqld",
+        "sudo systemctl start mysqld",
+        "git clone https://github.com/wvbirder/DevCS-MYSQL.git",
+        "(cd /home/opc/DevCS-MYSQL; sh setupAlphaMYSQL.sh)",
+        "sudo firewall-cmd --permanent --add-port=3306/tcp",
+        "sudo firewall-cmd --reload"
+      ]
+    }
+  ]
+}
