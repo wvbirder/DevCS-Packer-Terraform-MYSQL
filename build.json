@@ -15,7 +15,7 @@
       "base_image_ocid": "ocid1.image.oc1.iad.aaaaaaaa2tq67tvbeavcmioghquci6p3pvqwbneq3vfy7fe7m7geiga4cnxa",
       "compartment_ocid": "COMPARTMENT-HERE",
       "image_name": "DevCS_MYSQL",
-      "shape": "VM.Standard1.1",
+      "shape": "VM.Standard2.1",
       "ssh_username": "opc",
       "ssh_password": "welcome1",
       "subnet_ocid": "AD1-SUBNET-HERE",
