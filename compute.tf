@@ -16,7 +16,7 @@ resource "oci_core_instance" "DevCS_MYSQL" {
 //  display_name        = "${format("Docker%03d", count.index + 1)}"
   display_name        = "MYSQL"
   image               = "${var.client_image}"
-  shape               = "VM.Standard2.1"
+  shape               = "VM.Standard2.2"
   subnet_id           = "${oci_core_subnet.DevCS_SubnetAD01.id}"
 
   metadata {
