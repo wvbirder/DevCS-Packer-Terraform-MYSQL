@@ -1,7 +1,7 @@
 {
   "_comment": "The default base_image_ocid parameter below is for Ashburn, VA (IAD). If your trial is from another datacenter substitute the appropriate OCID",
   "_comment": "FRANKFURT=ocid1.image.oc1.eu-frankfurt-1.aaaaaaaakzrywmh7kwt7ugj5xqi5r4a7xoxsrxtc7nlsdyhmhqyp7ntobjwq",
-  "_comment": "ASHBURN=ocid1.image.oc1.iad.aaaaaaaa2tq67tvbeavcmioghquci6p3pvqwbneq3vfy7fe7m7geiga4cnxa",
+  "_comment": "ASHBURN=ocid1.image.oc1.iad.aaaaaaaawufnve5jxze4xf7orejupw5iq3pms6cuadzjc7klojix6vmk42va",
   "_comment": "LONDON=ocid1.image.oc1.uk-london-1.aaaaaaaalsdgd47nl5tgb55sihdpqmqu2sbvvccjs6tmbkr4nx2pq5gkn63a",
   "_comment": "PHOENIX=ocid1.image.oc1.phx.aaaaaaaasez4lk2lucxcm52nslj5nhkvbvjtfies4yopwoy4b3vysg5iwjra",  
   "builders": [
