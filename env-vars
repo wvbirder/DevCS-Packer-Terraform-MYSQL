@@ -12,7 +12,7 @@ export TF_VAR_client_image=
 export TF_VAR_compartment_ocid=
 
 ### Public/private keys used on the instances
-#export TF_VAR_ssh_public_key=$(cat ./oci_instance_key.pub)
+export TF_VAR_ssh_public_key=$(cat ./oci_instance_key.pub)
 export TF_VAR_ssh_private_key=$(cat ./oci_instance_key)
 
 ### Region
