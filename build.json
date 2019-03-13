@@ -39,7 +39,10 @@
         "git clone https://github.com/wvbirder/DevCS-MYSQL.git",
         "(cd /home/opc/DevCS-MYSQL; sh setupAlphaMYSQL.sh)",
         "sudo firewall-cmd --permanent --add-port=3306/tcp",
-        "sudo firewall-cmd --reload"
+        "sudo firewall-cmd --reload",
+        "sudo usermod -aG docker opc",
+        "sudo systemctl enable docker",
+        "sudo systemctl start docker"
       ]
     }
   ]
