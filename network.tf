@@ -97,8 +97,8 @@ resource "oci_core_security_list" "DevCS_SL" {
   },
   {
     tcp_options {
-      "max" = 80
-      "min" = 80
+      "max" = 8080
+      "min" = 8080
     }
 
     protocol = "6"
