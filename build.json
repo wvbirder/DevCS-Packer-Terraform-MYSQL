@@ -40,6 +40,7 @@
         "(cd /home/opc/DevCS-MYSQL; sh setupAlphaMYSQL.sh)",
         "sudo firewall-cmd --permanent --add-port=3306/tcp",
         "sudo firewall-cmd --reload",
+        "sudo yum install docker-engine -y",
         "sudo usermod -aG docker opc",
         "sudo systemctl enable docker",
         "sudo systemctl start docker"
