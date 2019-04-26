@@ -9,7 +9,7 @@
     {
       "user_ocid":"USER-HERE",
       "tenancy_ocid": "TENANCY-HERE",
-      "fingerprint":"a3:05:00:31:a4:4c:d4:28:a3:55:7f:6d:89:97:2e:5e",
+      "fingerprint":"FINGERPRINT-HERE",
       "key_file":"oci_api_key.pem",
       "availability_domain": "AD-HERE",
       "region": "us-ashburn-1",
